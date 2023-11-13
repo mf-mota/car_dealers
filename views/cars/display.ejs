@@ -1,0 +1,49 @@
+<% layout('layouts/boilerplate') -%>
+
+<div class="card text-center mb-5">
+    <div class="card-header text-white">
+      <strong><%= car.brand %></strong> <%= car.model %>
+    </div>
+    <div class="card-body">
+        <div id="carouselExampleInterval" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <% for (let i=0;i< car.images.length;i++) { %>
+                <% if (i === 0) { %>
+                <div class="carousel-item active">
+                  <img src="<%= car.images[i] %>" class="d-block w-100">
+                </div>
+                <% } else { %>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="<%= car.images[i] %>" class="d-block w-100">
+                </div>
+                <% } %>
+              <% } %>
+              <%- car.images.length ? '' :  '<div class="carousel-item active"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVHiEMW14MgTHhRjHbbPenRfW6c-HwG4N8ng&usqp=CAU" class="d-block w-100"></div>' %>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="general-desc">
+            <p class="gen-desc-header"><strong>General Characteristics</strong></p>
+            <p class="card-text"><b>Mileage:</b>&nbsp;<span><%= car.mileage %> KM</span></p>
+            <p class="card-text"><b>Year of Prod.:</b>&nbsp;<span>2013</span></p>
+            <p class="card-text"><b>Fuel:</b>&nbsp;<span>Diesel</span></p>
+          </div>
+          <div class="car-desc">
+            <p class="desc-header"><strong>Seller's description</strong></p>
+            <p class="card-text align-center seller-desc"><%- car.description %></p>
+          </div>
+      <a href="#" class="btn btn-primary">Contact Seller #ADDLINK</a>
+    </div>
+    <div class="card-footer text-body-secondary">
+      2 days ago
+    </div>
+  </div>
+
+

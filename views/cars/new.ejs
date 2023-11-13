@@ -1,0 +1,62 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+    <h1 class="text-center">New Listing</h1>
+    <div class="col-6 offset-3">
+        <form action="/cars" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="brand">Make</label>
+                <input class="form-control" type="text" id="brand" name="car[brand]" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="model">Model</label>
+                <input class="form-control" type="text" id="model" name="car[model]" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="registration">Registration</label>
+                <input class="form-control" type="text" id="registration" name="car[registration]">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="model">Year</label>
+                <input class="form-control" type="number" id="model" name="car[year]" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="model">Fuel</label>
+                <select class="form-select" id="fuel" name="car[fuel]" aria-label="Fuel Selection">
+                    <option selected>Select fuel...</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="LPG">LPG</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Hybrid">Hybrid</option>
+                  </select>
+            </div>
+            <div class="mb-3">
+                <label for="formFileMultiple" class="form-label">Select images</label>
+                <input class="form-control" type="file" name="campground[images]" id="formFileMultiple" multiple>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="mileage">Mileage</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="mileage-label">Km</span>
+                    <input type="number" class="form-control" id="mileage" placeholder="5000" name="car[mileage]" aria-label="Mileage" aria-describedby="mileage-label" required>                  </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="price">Price</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="price-label">€</span>
+                    <input type="number" class="form-control" id="price" placeholder="5000.00" name="car[price]" aria-label="Price" aria-describedby="price-label" required>                  </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="car[description]" required></textarea>
+            </div>
+            <div class="mb-5">
+                <button class="btn btn-success">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+

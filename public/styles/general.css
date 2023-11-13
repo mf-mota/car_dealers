@@ -1,0 +1,81 @@
+body {
+    height: 100vh;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(90deg, #D9AFD9 0%, #97D9E1 100%);
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+nav {
+    border-bottom: 3px solid white;
+}
+
+footer {
+    border-top: 3px solid white;
+
+}
+
+.carousel-inner {
+    height: 0;
+    padding-bottom: 50%; /* this sets carousel aspect ratio (2:1 here) */
+  }
+  
+  .carousel-item {
+    position: absolute !important; /* Bootstrap is insistent */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .carousel-item img {
+    height: 100%; /* Bootstrap handles width already */
+    object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+  }
+
+  .car-desc {
+    width: 100%;
+    border: 3px solid #97D9E1;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+  }
+
+  .general-desc {
+    width: 100%;
+    border: 3px solid #D9AFD9;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+  }
+
+  .desc-header {
+    border-bottom: 2px solid #97D9E1;
+    margin-bottom: 0;
+  }
+
+  .gen-desc-header {
+    border-bottom: 2px solid #D9AFD9;
+    margin-bottom: 0;
+  }
+
+.seller-desc {
+    padding: 10px 10px;
+}
+
+.img-front-card {
+    height: 200px !important;
+    width: auto !important; /* Bootstrap handles width already */
+    object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+}
+
+.front-card {
+    background-color: #ffffff00 !important;
+    transition: box-shadow .3s;
+}
+
+.front-card:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.ad-header {
+    background-color: #333333 !important;
+}
