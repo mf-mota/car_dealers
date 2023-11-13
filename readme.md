@@ -1,6 +1,6 @@
 ## Cars and Dealers App
 
-Simple CRUD web application built with Node.js (Express.JS) with MongoDB for managing cars in dealerships.
+Simple CRUD web application built with Node.js (Express.JS) and MongoDB for managing cars in dealerships.
 
 ## Technologies used
 
