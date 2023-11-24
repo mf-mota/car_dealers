@@ -5,6 +5,6 @@ Simple CRUD web application built with Node.js (Express.JS) with MongoDB for man
 ## Technologies used
 
 - Express.js
-- Mongoose (MongoDB ORM)
+- Mongoose (MongoDB ODM)
 - Backblaze B2 (Image Upload)
 - EJS/EJS-MATE Templating
