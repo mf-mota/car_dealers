@@ -3,7 +3,7 @@
     <% for (let car of cars) { %>
         <div class="card mx-2 front-card" style="width: 18rem;">
             <div class="card-body mb-1 ad-header">
-                <h6 class="card-title text-center text-white"><b><%= car.brand %> <%=car.model %></b></h5>
+                <h6 class="card-title text-center text-white"><a class="text-white" href="<%= `cars/${car.id}`%>"><b><%= car.brand %> <%=car.model %></b></a></h5>
               </div>
               <% if (car.images && car.images.length>0) { %>
                 <img src="<%= car.images[0] %>" class="img-front-card" alt="...">

@@ -1,0 +1,30 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+    <h1 class="text-center">New Dealer</h1>
+    <div class="col-6 offset-3">
+        <form action="/dealerships" method="POST">
+            <div class="mb-3">
+                <label class="form-label" for="name">Name</label>
+                <input class="form-control" type="text" id="name" name="dealer[name]" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="loc">Location</label>
+                <input class="form-control" type="text" id="loc" name="dealer[location]">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="phone">Phone No. </label>
+                <input class="form-control" type="text" id="phone" name="dealer[phoneNumber]" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="email">Email Address</label>
+                <input class="form-control" type="email" id="email" name="dealer[emailAddress]" required>
+            </div>
+            <div class="mb-5">
+                <button class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

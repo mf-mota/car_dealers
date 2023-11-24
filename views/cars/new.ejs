@@ -31,6 +31,16 @@
                   </select>
             </div>
             <div class="mb-3">
+                <label class="form-label" for="dealer">Dealership</label>
+                <select class="form-select" id="dealer" name="car[dealership]" aria-label="Dealership Selection">
+                    <option select></option>
+                    <% for (dealer of dealerships) { %>
+                    <option value="<%= dealer._id%>"><%- `${dealer.name}, ${dealer.location}` %></option>
+                    <% } %>
+
+                  </select>
+            </div>
+            <div class="mb-3">
                 <label for="formFileMultiple" class="form-label">Select images</label>
                 <input class="form-control" type="file" name="campground[images]" id="formFileMultiple" multiple>
             </div>
@@ -38,7 +48,8 @@
                 <label class="form-label" for="mileage">Mileage</label>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="mileage-label">Km</span>
-                    <input type="number" class="form-control" id="mileage" placeholder="5000" name="car[mileage]" aria-label="Mileage" aria-describedby="mileage-label" required>                  </div>
+                    <input type="number" class="form-control" id="mileage" placeholder="5000" name="car[mileage]" aria-label="Mileage" aria-describedby="mileage-label" required>                  
+                </div>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="price">Price</label>

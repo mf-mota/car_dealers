@@ -1,16 +1,19 @@
 const Car = require('../models/car')
+const Dealership = require('../models/dealership')
+
 
 module.exports.index = async (req, res) => {
     const cars = await Car.find({})
     res.render('cars/index', {cars})
 }
 
-module.exports.renderCreateForm = (req, res) => {
-    res.render('cars/new')
+module.exports.renderCreateForm = async (req, res) => {
+    const dealerships = await Dealership.find()
+    res.render('cars/new', {dealerships})
 }
 
 module.exports.display = async (req, res) => {
-    const car = await Car.findById("65522f8ee6730202769bf8d0")
+    const car = await Car.findById(req.params.id)
     res.render('cars/display', {car})
 }
 
